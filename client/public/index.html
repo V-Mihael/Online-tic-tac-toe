@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Jogo da Velha Online</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    </head>
+
+    <div id="blockGame" class="invite-container display-hidden"></div>
+
+    <section id="invite-container" class="invite-container display-hidden">
+
+        <div id="inviter-waitBox" class="invite display-hidden">
+            <div id="wait-msg" class="inviter-msg"></div>
+            <div id="waitedPlayer" class="inviter-invited"></div>
+        </div>
+
+        <div id="invited-box" class="invite display-hidden">
+
+            <div id="inviter" class="invited-inviter"></div>
+            <div id="invitemsg" class="invited-msg"></div>
+            <div class="buttonns-container">
+                <button id="negar" class="margin-right">Desistir</button>
+                <button id="aceitar">Jogar</button>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="login-container" class="login-container">
+
+
+        <div class="login-modal">
+            <span class="bemvindo">Bem Vindo, por favor me diga seu nome!</span>
+            <input class="input" type="text" id="username">
+            <button class="entrar" id="entrar">
+                Entrar
+            </button>
+
+        </div>
+
+    </section>
+
+    <body class="body">
+        <section class="cabecalho">
+            <span class="title">Jogo da Velha Online</span>
+        </section>
+
+        <div id="users-side" class="users-side display-hidden">
+            <div class="users-box">
+                <div class="users-header">
+                    <span class="users-title">
+                        Jogadores na sala
+                    </span>
+                </div>
+                <div id="voce" class="user-class">Você</div>
+                <div id="userContainer" class="users-container"></div>
+            </div>
+        </div>
+
+        <section id="aguardando-inicio" class="aguardando-inicio">
+            <span>Aguardando inicio de jogo.</span>
+        </section>
+
+
+        <div id="vez" class="vez display-hidden"></div>
+        <div id="jogo" class="display-hidden">
+            <div class="linha">
+                <div class="casa" id="casa1"></div>
+                <div class="casa" id="casa2"></div>
+                <div class="casa" id="casa3"></div>
+            </div>
+            <div class="linha">
+                <div class="casa" id="casa4"></div>
+                <div class="casa" id="casa5"></div>
+                <div class="casa" id="casa6"></div>
+            </div>
+            <div class="linha">
+                <div class="casa" id="casa7"></div>
+                <div class="casa" id="casa8"></div>
+                <div class="casa" id="casa9"></div>
+            </div>
+            <button id="desistir" class="desistir">Desistir</button>
+        </div>
+        <div id="resultado"></div>
+    </body>
+
+    <script src="socket.io.js"></script>
+    <script src="index.js"></script>
+
+</body>
+</html>

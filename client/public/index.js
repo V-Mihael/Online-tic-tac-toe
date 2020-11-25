@@ -1,5 +1,5 @@
 document.getElementById('entrar').addEventListener('click', () => {
-    let socket = io('localhost:5000');
+    let socket = io('http://localhost:5000');
     // VARIAVEIS "GLOBAIS"
     let inviter, invited, myusername, gameRoom, timeout, timeout2, timeout3
     let arraydeUsuarios = []

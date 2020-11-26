@@ -112,6 +112,9 @@ io.on('connection', (socket) => {
             games[room] = null
             roomsControl[room] = null
         }
+        // else if(lastTurn == 9){
+
+        // }
         else socket.to(room).emit('yourTurn', !lastTurn)
     })
 

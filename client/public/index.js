@@ -63,14 +63,6 @@ document.getElementById('entrar').addEventListener('click', () => {
         socket.emit('authentication', { username: usernameBox.value });
     });
 
-    socket.on('loaddata', function (data) {
-        data.forEach((coord) => {
-            let marcador = L.marker([coord.lat, coord.long]);
-            marcador.bindTooltip(coord.nome, { permanent: true }).openTooltip();
-            marcador.addTo(mymap)
-        })
-    });
-
     socket.on('authenticated', function (usernamesList) {
         voce.classList.remove('display-hidden')
         vez.classList.add('display-hidden')
